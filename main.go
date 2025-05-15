@@ -125,6 +125,35 @@ func example_defer() {
 }
 
 
+// Maps in Go 
+
+func maps() {
+
+	ages := map[string] int {"Alice": 30 , "Bob": 25}
+
+	fmt.Println(ages["Alice"])
+
+	ages["Charlie"] = 35
+
+	delete(ages,"Bob")
+
+	val , exits := ages["Charlie"]
+
+	if exits {
+
+		fmt.Println("Bob's ages:", val)
+
+
+	}else {
+
+		fmt.Println("Key 'Bob' not found.")
+
+
+	}
+
+	fmt.Println(len(ages))
+}
+
 // Main Funtion 
 func main() {
 
@@ -138,5 +167,7 @@ func main() {
 	switch_case()
 
 	example_defer()
+
+	maps()
 
 }
