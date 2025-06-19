@@ -154,6 +154,15 @@ func maps() {
 	fmt.Println(len(ages))
 }
 
+func pointers() {
+
+	age := 5
+
+	var Pointer *int = &age
+	fmt.Println(&age)
+	fmt.Println(Pointer)
+}
+
 // Main Funtion 
 func main() {
 
@@ -169,5 +178,9 @@ func main() {
 	example_defer()
 
 	maps()
+
+	fmt.Println("Practice with Pointers")
+
+	pointers()
 
 }
